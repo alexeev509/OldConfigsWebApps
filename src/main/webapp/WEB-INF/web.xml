@@ -22,4 +22,25 @@
         <url-pattern>/second</url-pattern>
     </servlet-mapping>
     <!--test/second-->
+    <!--I recommend to read it: http://java-online.ru/servlet-questions.xhtml-->
+    <filter>
+        <filter-name>FirstFilterName</filter-name>
+        <filter-class>FirstFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FirstFilterName</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>SecondFilterName</filter-name>
+        <filter-class>SecondFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SecondFilterName</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
