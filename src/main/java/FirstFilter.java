@@ -3,7 +3,6 @@ import java.io.IOException;
 
 public class FirstFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
-
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
@@ -14,4 +13,5 @@ public class FirstFilter implements Filter {
     public void destroy() {
 
     }
+
 }

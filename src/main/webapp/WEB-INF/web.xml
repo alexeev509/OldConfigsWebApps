@@ -3,7 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-
     <servlet>
         <servlet-name>testServlet</servlet-name>
         <servlet-class>TestServlet</servlet-class>
@@ -21,6 +20,27 @@
         <servlet-name>secondServlet</servlet-name>
         <url-pattern>/second</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>thirdServlet</servlet-name>
+        <servlet-class>ThirdPageTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>thirdServlet</servlet-name>
+        <url-pattern>/second/third</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>mainPage</servlet-name>
+        <servlet-class>mainSrevlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mainPage</servlet-name>
+        <url-pattern></url-pattern>
+    </servlet-mapping>
+    <!--почему сэконд после тэст-->
     <!--test/second-->
     <!--I recommend to read it: http://java-online.ru/servlet-questions.xhtml-->
     <filter>

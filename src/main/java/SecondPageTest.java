@@ -22,7 +22,6 @@ public class SecondPageTest extends HttpServlet {
     public void destroy() {
         System.out.println("Destroy of SecondPageContext");
     }
-
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("we try to find which method was called");
