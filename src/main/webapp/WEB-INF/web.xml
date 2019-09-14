@@ -15,6 +15,15 @@
     <servlet>
         <servlet-name>secondServlet</servlet-name>
         <servlet-class>SecondPageTest</servlet-class>
+
+        <init-param>
+            <param-name>message</param-name>
+            <param-value>Hello Servlets</param-value>
+        </init-param>
+        <init-param>
+            <param-name>message2</param-name>
+            <param-value>Hello Servlets2</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>secondServlet</servlet-name>
@@ -39,6 +48,15 @@
     <servlet-mapping>
         <servlet-name>mainPage</servlet-name>
         <url-pattern></url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>fourth</servlet-name>
+        <servlet-class>FourthPage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fourth</servlet-name>
+        <url-pattern>/four</url-pattern>
     </servlet-mapping>
     <!--почему сэконд после тэст-->
     <!--test/second-->

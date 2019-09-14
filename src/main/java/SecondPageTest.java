@@ -3,6 +3,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Enumeration;
 
 public class SecondPageTest extends HttpServlet {
     @Override
@@ -12,6 +13,14 @@ public class SecondPageTest extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        Enumeration<String> initParameterNames = getServletConfig().getInitParameterNames();
+        while (initParameterNames.hasMoreElements()) {
+            System.out.println(initParameterNames.nextElement());
+        }
+
+        System.out.println("name of the servlet :" + getServletConfig().getServletName());
+
         System.out.println("I am in get method");
         String varTextA = "i add this text to jsp!";
         req.setAttribute("textA", varTextA);
